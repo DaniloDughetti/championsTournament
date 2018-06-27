@@ -1,0 +1,26 @@
+{
+  "name": "championsTournament",
+  "version": "1.0.0",
+  "description": "NodeJS Rest API that enables client to organize soccer tournament 2.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaniloDughetti/championsTournament.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaniloDughetti/championsTournament/issues"
+  },
+  "homepage": "https://github.com/DaniloDughetti/championsTournament#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "joi": "^13.4.0",
+    "mongoose": "^5.1.7",
+    "nodemon": "^1.17.5"
+  }
+}
