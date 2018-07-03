@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
+const DateOnly = require('mongoose-dateonly')(mongoose);
 
 const playerSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: String,
     surname: String,
-    birthday: mongoose.Schema.Types.Date,
+    birthday: DateOnly,
     shirtNumber: Number
 });
 

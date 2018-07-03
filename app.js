@@ -12,10 +12,10 @@ mongoose.connect(
  * Players 
  */
 app.get('/api/players', playerRouter.list);
-
-app.get('/api/player/:playerId', playerRouter.getById);
-
-app.post('/api/player', playerRouter.create);
+app.get('/api/players/:id', playerRouter.get);
+app.post('/api/players', playerRouter.create);
+app.put('/api/players', playerRouter.update);
+app.delete('/api/players/:id', playerRouter.delete);
 
 
 const port = process.env.PORT || 3000;
