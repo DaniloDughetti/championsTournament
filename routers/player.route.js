@@ -1,4 +1,4 @@
-const Player = require('../models/player');
+const Player = require('../models/player.model');
 const mongoose = require('mongoose');
 const DateOnly = require('mongoose-dateonly')(mongoose);
 const Joi = require('joi');
@@ -93,11 +93,10 @@ exports.delete = function(req, res){
     Player.findOneAndRemove({_id: playerId})
     .exec()
     .then(result => {
-        console.log(result);
         if(result)
             return res.status(200).json({result: `Player ${playerId} deleted`});
         else
-            return res.status(404).json({result: `Player ${playerId} not found`});
+            return res.status(404).json({error: `Player ${playerId} not found`});
     })
     .catch(error => {
         res.status(500).json({
